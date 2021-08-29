@@ -9,6 +9,7 @@ client_socket.connect((HOST, PORT))
 client_socket.sendall('start'.encode())
 
 data = client_socket.recv(1024)
+print('Received from', data.decode())
 
 client_socket.sendall('end_1'.encode())
 
